@@ -1,2 +1,5 @@
 node_modules
 .env
+stories.md
+.DS_Store
+images

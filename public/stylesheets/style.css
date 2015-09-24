@@ -1,8 +1,100 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+li a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666; }
 
-a {
-  color: #00B7FF;
-}
+body {
+  color: #666; }
+
+html, body {
+  height: 100%; }
+
+#main {
+  min-height: 80%;
+  overflow: auto;
+  padding-bottom: 50px; }
+
+/* must be same height as the footer */
+#footer {
+  position: relative;
+  margin-top: -50px;
+  /* negative value of footer height */
+  height: 50px;
+  clear: both; }
+
+p {
+  font-size: 18px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "open sans";
+  font-weight: 200; }
+
+.card {
+  box-shadow: 0 0 100px -50px black;
+  width: 250px;
+  height: 250px;
+  background: rgba(51, 110, 123, 0.6);
+  border-radius: 125px;
+  margin: 10px auto;
+  transition: all 0.6s;
+  overflow: hidden;
+  display: inline-block; }
+  .card:hover {
+    background: rgba(51, 110, 123, 0.8);
+    border-radius: 5px;
+    height: 500px; }
+    .card:hover p, .card:hover h1, .card:hover h4 {
+      opacity: 1; }
+  .card p, .card h1 {
+    text-align: center;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    text-overflow: elipsis; }
+  .card h1 {
+    margin-top: -20px; }
+  .card h4 {
+    color: #b8dae2;
+    text-align: center; }
+  .card p {
+    padding: 0px 10px;
+    text-align: justify; }
+  .card .photo1 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/judy.jpg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+    margin: 15px;
+    border-radius: 250px; }
+  .card .photo2 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/denis.jpeg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+    margin: 15px;
+    border-radius: 250px; }
+  .card .grey {
+    color: #f2f2f2; }
+
+.panel-body, .panel-title {
+  font-size: 18px; }
+
+ul {
+  list-style-type: none; }
+
+h1, h3, ul, li {
+  text-align: center; }
+
+h1, p {
+  text-align: center; }

@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #main
+    .container
+      .jumbotron
+        h1 Get A Free Math Mentor
+        h3 We're not here to do your homework, we're here to help you grasp fundamental concepts.
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/free.png' alt='free logo' width='200')
+            .caption
+              h3 Free. Period.
+              p No catches. No hidden fees. No credit Cards.
+              p
+                a(href='/fees') The Fine Print
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/personalized.png' alt='personalized logo' width='200')
+            .caption
+              h3 Personalized
+              p Every student gets one on one attention.
+              p
+                a(href='/about') Meet The Mentors
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/coverage.png' alt='coverage logo' width='200')
+            .caption
+              h3 Coverage
+              p We've got you covered in all realms of math.
+              p
+                a(href='/subjects') See what we cover.

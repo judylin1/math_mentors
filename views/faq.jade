@@ -1,0 +1,109 @@
+extends layout
+
+block content
+  #main
+    .container
+      .page-header
+        h1.text-center <b>FAQ's</b>
+    .container
+      #accordion.panel-group(role='tablist', aria-multiselectable='true')
+      
+        .panel.panel-default
+          #headingOne.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                | How does Math Mentor work?
+          #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+            .panel-body
+              | Math Mentor is simple. We're not here to hold your hand and do your homework. We're here to help you when you have that occasional 
+              | question. Each of our mentors are professionals in the workforce, but strive to dedicate one to two hours of their busy lives each 
+              | week to help students understand math. If you're looking for a service to do 10 homework questions for you or even 5, we're not 
+              | what you're looking for.
+        
+        .panel.panel-default
+          #headingTwo.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                | What can you help me with?
+          #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+            .panel-body
+              | Being math lovers, we can help you in all realms of math. We aim for anything up through high school, but understand subjects like 
+              | calculus are also taught in college. If in doubt, ask anyways! We're not afraid to admit we don't know something.
+        
+        .panel.panel-default
+          #headingThree.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                | How do I get a mentor?
+          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Simple! First you sign up for Math Mentors. Once you've signed up, you can submit a question/concept you need help with.
+              | If you have previously worked with a particular mentor, you can request them again in our form. Otherwise, you'll get a mentor 
+              | who is available and is the best fit for your question. That mentor will work with you one on one to help you understand your 
+              | question. 
+        
+        .panel.panel-default
+          #headingFour.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                | Will my mentor help me with my homework?
+          #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Yes and no. No in the sense that you send us your homework and we'll solve it for you. When you come to us for help with a concept, 
+              | we will work out an example problem with you that could be from your homework. If you don't have an example from your homework, we 
+              | can make up our own example to explain to you. We're not here to do your homework, we're here to help YOU understand how to do your homework. 
+              | We all firmly believe in the old proverb, "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime".
+        
+        .panel.panel-default
+          #headingFive.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                | What if my mentor can't help me?
+          #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | We're confident that at least one of our mentors will be able to answer your question. If not, we're not afraid to admit what we don't know. 
+              | There's nothing worse than having a tutor make up an answer to seem smart.
+        
+        .panel.panel-default
+          #headingSix.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                | Can I schedule a get together with my mentor?
+          #collapseSix.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Not at the current moment, but we're working on setting up scheduling so you can see when a mentor is online and get instant feedback.
+      
+        .panel.panel-default
+          #headingSeven.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
+                | Will I have the same mentor every time?
+          #collapseSeven.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Not necessarily. Our mentors each have their own area of interests. You can, however, select which mentor you'd like to work with.
+      
+        .panel.panel-default
+          #headingEight.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
+                | How long does it take for a mentor to get back to me?
+          #collapseEight.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Our mentors will do their utmost best to get back to you within a couple days. 
+      
+        .panel.panel-default
+          #headingNine.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseNine', aria-expanded='false', aria-controls='collapseNine')
+                | What are the qualifications of the mentors?
+          #collapseNine.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Our mentors all have a minimum of a Bachelor's in Math. Some have more advanced degrees.
+        .panel.panel-default
+          #headingTen.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTen', aria-expanded='false', aria-controls='collapseTen')
+                | I have more questions. How can I get in touch with you?
+          #collapseTen.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Feel free to email us at: we.are.math.mentors@gmail.com.

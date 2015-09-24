@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "open sans";
+  font-weight: 200;
+}
+.card {
+  box-shadow: 0 0 100px -50px rgba(0,0,0,1);
+  width: 250px;
+  height: 250px;
+  background: rgba(#336E7B, 0.6);
+  border-radius: 125px;
+  margin: 10px auto;
+  transition: all 0.6s;
+  overflow: hidden;
+  display: inline-block;
+  &:hover {
+    background: rgba(#336E7B, 0.8);
+    border-radius: 5px;
+    height: 500px;
+    p, h1, h4 {
+      opacity: 1;
+    }
+  }
+  p, h1 {
+    text-align: center;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    text-overflow: elipsis;
+  }
+  h1 {
+    margin-top: -20px;
+  }
+  h4 {
+    color: #b8dae2;
+    text-align: center;
+  }
+  p {
+    padding: 0px 10px;
+    text-align: justify;
+  }
+  .photo1 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/judy.jpg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2), 0px 0px 20px rgba(0,0,0,0.2) inset;
+    margin: 15px;
+    border-radius: 250px;
+  }
+  .photo2 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/denis.jpeg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2), 0px 0px 20px rgba(0,0,0,0.2) inset;
+    margin: 15px;
+    border-radius: 250px;
+  }
+  .grey {
+    color: #f2f2f2;
+  }
+}
