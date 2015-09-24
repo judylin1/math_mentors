@@ -3,6 +3,9 @@ li a {
   font-weight: 400;
   color: #666; }
 
+.navbar {
+  background-color: white; }
+
 body {
   color: #666; }
 
@@ -14,13 +17,31 @@ html, body {
   overflow: auto;
   padding-bottom: 50px; }
 
-/* must be same height as the footer */
 #footer {
   position: relative;
   margin-top: -50px;
-  /* negative value of footer height */
   height: 50px;
   clear: both; }
+
+.jumbotron {
+  background-color: #6390BF; }
+  .jumbotron h1, .jumbotron h3 {
+    color: white; }
+
+.right {
+  margin-left: 3%;
+  font-size: 17px; }
+
+img {
+  padding-bottom: 2%; }
+
+.circle {
+  border-radius: 50%; }
+
+.blockquote {
+  display: inline-block;
+  overflow: auto;
+  width: 90%; }
 
 p {
   font-size: 18px; }
@@ -45,7 +66,7 @@ p {
   .card:hover {
     background: rgba(51, 110, 123, 0.8);
     border-radius: 5px;
-    height: 500px; }
+    height: auto; }
     .card:hover p, .card:hover h1, .card:hover h4 {
       opacity: 1; }
   .card p, .card h1 {
@@ -84,6 +105,28 @@ p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
     margin: 15px;
     border-radius: 250px; }
+  .card .photo3 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/jin.jpg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+    margin: 15px;
+    border-radius: 250px; }
+  .card .photo4 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/tan.jpeg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+    margin: 15px;
+    border-radius: 250px; }
   .card .grey {
     color: #f2f2f2; }
 
@@ -93,8 +136,5 @@ p {
 ul {
   list-style-type: none; }
 
-h1, h3, ul, li {
-  text-align: center; }
-
-h1, p {
-  text-align: center; }
+li {
+  font-size: 19px; }

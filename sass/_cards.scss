@@ -18,7 +18,7 @@
   &:hover {
     background: rgba(#336E7B, 0.8);
     border-radius: 5px;
-    height: 500px;
+    height: auto;
     p, h1, h4 {
       opacity: 1;
     }
@@ -58,6 +58,30 @@
     width: 220px;
     height: 220px;
     background: url("../images/denis.jpeg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2), 0px 0px 20px rgba(0,0,0,0.2) inset;
+    margin: 15px;
+    border-radius: 250px;
+  }
+  .photo3 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/jin.jpg");
+    background-size: 200px;
+    background-position: center;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2), 0px 0px 20px rgba(0,0,0,0.2) inset;
+    margin: 15px;
+    border-radius: 250px;
+  }
+  .photo4 {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: url("../images/tan.jpeg");
     background-size: 200px;
     background-position: center;
     border: 10px solid white;
