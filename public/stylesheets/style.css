@@ -145,3 +145,20 @@ ul {
 
 li {
   font-size: 19px; }
+
+.btn-default {
+  background-color: #ecf0f1;
+  margin-right: 21px;
+  margin-bottom: 10px;
+  border-radius: 5px !important; }
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  background-color: #bdc3c7; }
+
+.btn-default:active, .btn-default.active {
+  background-color: #7f8c8d;
+  color: white; }
+
+#gradeSelection {
+  color: #666;
+  font-weight: normal; }

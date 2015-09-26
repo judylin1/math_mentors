@@ -23,6 +23,10 @@ router.get('/subjects', function(req, res, next) {
   res.render('subjects')
 });
 
+router.get('/question/new', function(req, res, next) {
+  res.render('questions/new')
+});
+
 router.get('/dashboard', stormpath.loginRequired, function(req, res) {
   res.send('Welcome back: ' + res.locals.user.email);
 });

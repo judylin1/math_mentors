@@ -1,3 +1,49 @@
 extends ../layout
 
 block content
+  #main
+    .container
+      form(ng-app='app' ng-controller='CategoryController')
+        .form-group
+          label(for='question') Question
+          textarea.form-control(rows='5' name='question' id='question' autofocus)
+        .form-group
+          label(for='toggleCategory') Category
+            span.help-block Select multiple if necessary.
+          .btn-group(data-toggle='buttons')
+            label.btn.btn-default(ng-model='obj.fractions' btn-checkbox='') Fractions
+            label.btn.btn-default(ng-model='obj.exponentRoots' btn-checkbox='') Exponents / Roots
+            label.btn.btn-default(ng-model='obj.FuncEquations' btn-checkbox='') Functions / Equations
+            label.btn.btn-default(ng-model='obj.geometry' btn-checkbox='') Geometry
+            label.btn.btn-default(ng-model='obj.graphs' btn-checkbox='') Graphs
+            label.btn.btn-default(ng-model='obj.integers' btn-checkbox='') Integers
+            label.btn.btn-default(ng-model='obj.pemdas' btn-checkbox='') Mixed Operations / PEMDAS
+            label.btn.btn-default(ng-model='obj.percents' btn-checkbox='') Percents
+            label.btn.btn-default(ng-model='obj.numTheory' btn-checkbox='') Number Theory
+            label.btn.btn-default(ng-model='obj.probStat' btn-checkbox='') Probability / Statistics
+            label.btn.btn-default(ng-model='obj.ratioProportions' btn-checkbox='') Ratios / Proportions
+            label.btn.btn-default(ng-model='obj.trig' btn-checkbox='') Trigonometry
+            label.btn.btn-default(ng-model='obj.algebra' btn-checkbox='') Pre-Algebra / Algebra
+            label.btn.btn-default(ng-model='obj.calc' btn-checkbox='') Pre-Calculus / Calculus
+          {{ obj | json }}
+        .form-group
+          label(for='gradeSelection') Select Grade:
+            select#gradeSelection.form-control
+              option(value='selectOne' disabled selected) Select One
+              option(value='1') 1
+              option(value='2') 2
+              option(value='3') 3
+              option(value='4') 4
+              option(value='5') 5
+              option(value='6') 6
+              option(value='7') 7
+              option(value='8') 8
+              option(value='9') 9
+              option(value='10') 10
+              option(value='11') 11
+              option(value='12') 12
+              option(value='other') Other
+        .form-group
+          label(for='exampleInputFile') File input
+          input#exampleInputFile(type='file')
+        button.btn.btn-primary(type='submit') Submit
