@@ -1,11 +1,16 @@
 var express = require('express');
 require('dotenv').load();
-var stormpath = require('express-stormpath');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var stormpath = require('express-stormpath');
+
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
+var monk = require('monk');
+var db = monk('localhost:27017/math');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -13,11 +18,38 @@ var users = require('./routes/users');
 var app = express();
 
 app.use(stormpath.init(app, {
-  apiKeyId: process.env.STORMPATH_ID,
-  apiKeySecret: process.env.STORMPATH_SECRET,
-  application: process.env.STORMPATH_APP,
-  secretKey: process.env.SECRET,
+    postLoginHandler: function (account, req, res, next) {
+        console.log('Hey! ' + account.email + ' just logged in!');
+        next();
+    },
+    postRegistrationHandler: function (account, req, res, next) {
+        var collection = db.get('usercollection');
+        var mongo_id = new ObjectID();
+        collection.insert( { _id: mongo_id, questions: [] } );
+        account.customData["mongo_id"] = mongo_id;
+        console.log('User:', account.email, 'just registered!');
+        account.customData.save(function(err) {
+         if (err) {
+             console.log('DID NOT SAVE USER');
+             next(err);
+         } else {
+             console.log('custom data saved!');
+         }
+     });
+        next();
+    },
+    apiKeyId: process.env.STORMPATH_ID,
+    apiKeySecret: process.env.STORMPATH_SECRET,
+    application: process.env.STORMPATH_APP,
+    secretKey: process.env.SECRET,
+    redirectUrl: '/dashboard',
+    enableForgotPassword: true,
+    expandCustomData: true,
 }));
+
+app.get('/dashboard', stormpath.loginRequired, function(req, res) {
+  res.send('Welcome back: ' + res.locals.user.email);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +62,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

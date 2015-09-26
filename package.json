@@ -13,6 +13,9 @@
     "express": "~4.12.4",
     "express-stormpath": "^1.0.6",
     "jade": "~1.9.2",
+    "mongodb": "^2.0.43",
+    "mongoose": "^4.1.8",
+    "monk": "^1.0.1",
     "morgan": "~1.5.3",
     "node-sass": "^3.3.3",
     "serve-favicon": "~2.2.1"
