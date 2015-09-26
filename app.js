@@ -15,6 +15,9 @@ var db = monk('localhost:27017/math');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var auth = require('./routes/auth');
+var questions = require('./routes/questions');
+var categories = require('./routes/categories');
 
 var app = express();
 
