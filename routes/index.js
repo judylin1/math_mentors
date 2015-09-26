@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var stormpath = require('express-stormpath');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,6 +21,10 @@ router.get('/fees', function(req, res, next) {
 
 router.get('/subjects', function(req, res, next) {
   res.render('subjects')
+});
+
+router.get('/dashboard', stormpath.loginRequired, function(req, res) {
+  res.send('Welcome back: ' + res.locals.user.email);
 });
 
 module.exports = router;
