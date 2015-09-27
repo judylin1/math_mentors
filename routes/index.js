@@ -29,6 +29,7 @@ router.get('/question/new', function(req, res, next) {
 
 router.get('/dashboard', stormpath.loginRequired, function(req, res, next) {
   res.render('users/index');
+  console.log(res.locals.user.groups);
 });
 
 module.exports = router;

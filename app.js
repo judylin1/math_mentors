@@ -42,6 +42,13 @@ app.use(stormpath.init(app, {
    });
     next();
   },
+  enableFacebook: true,
+  social: {
+    facebook: {
+      appId: process.env.FB_ID,
+      appSecret: process.env.FB_SECRET,
+    },
+  },
   apiKeyId: process.env.STORMPATH_ID,
   apiKeySecret: process.env.STORMPATH_SECRET,
   application: process.env.STORMPATH_APP,
@@ -67,6 +74,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req,res,next){
   req.db = db;
   next();
+});
+
+app.get('/admin', stormpath.groupsRequired(['admins']), function(req, res) {
+  res.send('If you can see this message, you must be an admin!');
+});
+
+app.get('/students', stormpath.groupsRequired(['students']), function(req, res) {
+  res.send('If you can see this message, you must be a student!');
 });
 
 app.use('/', routes);
